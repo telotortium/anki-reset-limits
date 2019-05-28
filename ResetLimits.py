@@ -2,6 +2,8 @@
 # See github page to report issues or to contribute:
 # https://github.com/telotortium/anki-reset-limits
 #
+# AnkiWeb: https://ankiweb.net/shared/info/738867649
+#
 # Contributors:
 # - @telotortium
 #
