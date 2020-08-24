@@ -10,6 +10,7 @@
 # Based on https://github.com/Arthaey/anki-rebuild-all.
 
 from anki.hooks import wrap
+from anki.lang import _
 from aqt.overview import Overview
 from aqt.utils import shortcut, tooltip
 
@@ -25,11 +26,7 @@ def _handleResetLimitsButton(self, url):
     revToday = currentDeck['revToday']
     newToday[1] = 0
     revToday[1] = 0
-    self.mw.col.decks.current().update({
-        'newToday': newToday,
-        'revToday': revToday,
-    })
-    self.mw.col.decks.save()
+    self.mw.col.decks.save(currentDeck)
     self.mw.col.decks.flush()
     tooltip("Reset today's new and review limits")
     self.mw.reset()
